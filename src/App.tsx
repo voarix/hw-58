@@ -9,10 +9,26 @@ const App = () => {
     setShowModal(false);
   };
 
+  const buttons = [
+    {
+      type: "primary",
+      label: "Continue",
+      onClick: () => alert("clicked continue"),
+    },
+    { type: "danger", label: "Close", onClick: cancel },
+  ];
+
   return (
     <>
       <button onClick={() => setShowModal(true)}>Открыть модальное окно</button>
-      <Modal show={showModal} title='Это не баг, а фича' onClose={cancel}><p>да пребудет с тобой сила</p></Modal>
+      <Modal
+        show={showModal}
+        title="Это не баг, а фича"
+        onClose={cancel}
+        buttons={buttons}
+      >
+        <p>да пребудет с тобой сила</p>
+      </Modal>
     </>
   );
 };
