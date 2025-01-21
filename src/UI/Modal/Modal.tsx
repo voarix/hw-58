@@ -38,18 +38,18 @@ const Modal: React.FC<Props> = ({
               <button className="btn-close" onClick={onClose}></button>
             </div>
             <div className="p-3">{children}</div>
-              <div className="modal-footer">
-                {buttons.map((button, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    className={`btn btn-${button.type}`}
-                    onClick={button.onClick}
-                  >
-                    {button.label}
-                  </button>
-                ))}
-              </div>
+            <div className="modal-footer">
+              {buttons.map((button, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`btn btn-${button.type}`}
+                  onClick={button.onClick}
+                >
+                  {button.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
